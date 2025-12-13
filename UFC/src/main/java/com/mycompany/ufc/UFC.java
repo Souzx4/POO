@@ -24,5 +24,8 @@ public class UFC {
         Luta x = new Luta();
         x.marcarLuta(l[0], l[1]);
         x.lutar();
+        
+        x.marcarLuta(l[3], l[4]);
+        x.lutar();
     }
 }

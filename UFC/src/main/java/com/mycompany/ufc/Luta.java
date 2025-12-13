@@ -29,8 +29,10 @@ public class Luta {
     }
     public void lutar(){
         if (this.aprovada){
+            System.out.println("------------------");
             System.out.println("### Desafiado ###");
             this.desafiado.apresentar();
+            System.out.println("------------------");
             System.out.println("### Desafiante ###");
             this.desafiante.apresentar();
             
@@ -58,6 +60,7 @@ public class Luta {
                     break;
             }       
         } else {
+            System.out.println("-----------------------");
             System.out.println("Luta não pode acontecer");
         }
     }
