@@ -39,16 +39,19 @@ public class Luta {
             
             switch(vencedor){
                 case 0: // empate
+                    System.out.println("-------------------");
                     System.out.println("empatou");
                     this.desafiado.empatarLuta();
                     this.desafiante.empatarLuta();
                     break;
                 case 1: //ganhou desafiado
+                    System.out.println("-------------------");
                     System.out.println("Vitoria do " + this.desafiado.getNome());
                     this.desafiado.ganharLuta();
                     this.desafiante.perderLuta();
                     break;
                 case 2: //ganhou desafiante
+                    System.out.println("-------------------");
                     System.out.println("Vitoria do " + this.desafiante.getNome());
                     this.desafiado.perderLuta();
                     this.desafiante.ganharLuta();
