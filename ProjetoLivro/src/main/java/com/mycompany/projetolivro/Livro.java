@@ -14,7 +14,7 @@ public class Livro implements Publicacao {
     private int totPaginas;
     private int pagAtual;
     private boolean aberto;
-    private String leitor;
+    private Pessoa leitor;
     
     /*public void detalhes(){
         System.out.println("---Detalhes do Livro----");
@@ -23,18 +23,26 @@ public class Livro implements Publicacao {
         System.out.println("Total de paginas: " + this.getTotPaginas());
     }*/
 
-    public String detalhes() {
-        return "Livro{" + "titulo=" + titulo + ", autor=" + 
-                autor + ", totPaginas=" + totPaginas + ", pagAtual=" + 
-                pagAtual + ", aberto=" + aberto + ", leitor=" + leitor + '}';
+    public String detalhes() { //toStrig
+        return "Livro{" + " titulo= " + titulo + 
+                "\n, autor= " + autor + 
+                "\n, total de paginas= " + totPaginas + 
+                "\n, pagina atual= " + pagAtual + 
+                "\n, aberto= " + aberto + 
+                "\n, leitor= " + leitor.getNome() +
+                "\n, idade= " + leitor.getIdade() + 
+                "\n, Sexo= " + leitor.getSexo() + 
+                '}';
     }
     
     
 
-    public Livro(String titulo, String autor, int totPaginas, String leitor) {
+    public Livro(String titulo, String autor, int totPaginas, Pessoa leitor) {
         this.titulo = titulo;
         this.autor = autor;
         this.totPaginas = totPaginas;
+        this.aberto = false;
+        this.pagAtual = 0;
         this.leitor = leitor;
     }
 
@@ -78,11 +86,11 @@ public class Livro implements Publicacao {
         this.aberto = aberto;
     }
 
-    public String getLeitor() {
+    public Pessoa getLeitor() {
         return leitor;
     }
 
-    public void setLeitor(String leitor) {
+    public void setLeitor(Pessoa leitor) {
         this.leitor = leitor;
     }
 
@@ -96,16 +104,28 @@ public class Livro implements Publicacao {
     }
 
     @Override
-    public void folhear() {
+    public void folhear(int p) {
+        if (p > this.totPaginas){
+            this.pagAtual = 0;
+        } else {
+            this.pagAtual = p;
+        }
         
     }
 
     @Override
     public void avancarPag() {
+        if (this.aberto && this.pagAtual < this.totPaginas){
+            this.pagAtual++;
+        } else if (!this.aberto) {
+            System.out.println("O livro não está aberto");
+        } else {
+            System.out.println("Voce ja esta na ultima pagina");
+        }
         
     }
     @Override
     public void voltarPag(){
-        
+        this.pagAtual--;
     }
 }

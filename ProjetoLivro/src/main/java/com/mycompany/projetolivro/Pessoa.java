@@ -15,7 +15,6 @@ public class Pessoa {
     
     public void fazerAniver(){
         this.idade++;
-        System.out.println(this.nome + " esta fazendo aniversario! Agora ele(a) tem " + this.idade + " anos");
     }
 
     public Pessoa(String nome, int idade, String sexo) {
