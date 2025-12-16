@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.projetolivro;
+package com.mycompany.teste;
 
 /**
  *
@@ -15,21 +15,20 @@ public class Livro implements Publicacao {
     private int pagAtual;
     private boolean aberto;
     private Pessoa leitor;
-    
 
-    public String detalhes() { //toStrig
-        return "Livro{" + " titulo= " + titulo + 
-                "\n, autor= " + autor + 
-                "\n, total de paginas= " + totPaginas + 
-                "\n, pagina atual= " + pagAtual + 
-                "\n, aberto= " + aberto + 
-                "\n, leitor= " + leitor.getNome() +
-                "\n, idade= " + leitor.getIdade() + 
-                "\n, Sexo= " + leitor.getSexo() + 
+    public String detalhes() {
+        System.out.println("-------------------------");
+        return "Livro{" + ""
+                + "titulo=" + titulo + "\n, autor=" 
+                + autor + "\n, totPaginas=" + 
+                totPaginas + "\n, pagAtual=" + 
+                pagAtual + "\n, aberto=" + 
+                aberto + "\n, leitor=" + 
+                leitor.getNome() + 
+                "\n, Sexo " + leitor.getSexo() +
+                "\n, Idade " + leitor.getIdade() +
                 '}';
     }
-    
-    
 
     public Livro(String titulo, String autor, int totPaginas, Pessoa leitor) {
         this.titulo = titulo;
@@ -72,7 +71,7 @@ public class Livro implements Publicacao {
         this.pagAtual = pagAtual;
     }
 
-    public boolean isAberto() {
+    public boolean getAberto() {
         return aberto;
     }
 
@@ -92,8 +91,9 @@ public class Livro implements Publicacao {
     public void abrir() {
         this.aberto = true;
     }
+
     @Override
-    public void fechar(){
+    public void fechar() {
         this.aberto = false;
     }
 
@@ -104,7 +104,6 @@ public class Livro implements Publicacao {
         } else {
             this.pagAtual = p;
         }
-        
     }
 
     @Override
@@ -112,14 +111,20 @@ public class Livro implements Publicacao {
         if (this.aberto && this.pagAtual < this.totPaginas){
             this.pagAtual++;
         } else if (!this.aberto) {
-            System.out.println("O livro não está aberto");
+            System.out.println("O livro esta fechado");
         } else {
             System.out.println("Voce ja esta na ultima pagina");
         }
-        
     }
+
     @Override
-    public void voltarPag(){
+    public void voltarPag() {
         this.pagAtual--;
     }
+    
+    
+
+    
+    
+    
 }
