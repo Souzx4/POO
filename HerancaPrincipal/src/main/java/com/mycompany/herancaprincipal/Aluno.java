@@ -19,7 +19,7 @@ public class Aluno extends Pessoa {
     
     public void cancelarMatr(String Pessoa){
         if (this.matr.equals("Ativa")){
-            this.matr.equals("Cancelar");
+            this.matr = ("Cancelar");
             System.out.println("Matricula de " + this.getNome() + " foi cancelada");
         } else {
             System.out.println("A matricula está ativa");

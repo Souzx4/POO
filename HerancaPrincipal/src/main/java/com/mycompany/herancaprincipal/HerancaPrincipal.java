@@ -11,6 +11,6 @@ package com.mycompany.herancaprincipal;
 public class HerancaPrincipal {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Funcionario f = new Funcionario("Atendente", true, "ana", 30, "F");
     }
 }
