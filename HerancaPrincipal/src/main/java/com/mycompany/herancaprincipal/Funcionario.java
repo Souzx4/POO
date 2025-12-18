@@ -10,25 +10,11 @@ package com.mycompany.herancaprincipal;
  */
 public class Funcionario extends Pessoa {
     
-    public Funcionario(String nome, int idade, String sexo) {
-        super(nome, idade, sexo);
-    }
-    
     private String setor;
     private boolean trabalhando;
     
     public void mudarTrabalho(){
-        if (this.setor.equals(this.setor)){
-            System.out.println("você mudou de setor");
-        } else {
-            System.out.println("continua no mesmo setor");
-        }
-    }
-
-    public Funcionario(String setor, boolean trabalhando, String nome, int idade, String sexo) {
-        super(nome, idade, sexo);
-        this.setor = setor;
-        this.trabalhando = trabalhando;
+        this.trabalhando = ! this.trabalhando;
     }
 
     public String getSetor() {
@@ -39,7 +25,7 @@ public class Funcionario extends Pessoa {
         this.setor = setor;
     }
 
-    public boolean isTrabalhando() {
+    public boolean getTrabalhando() {
         return trabalhando;
     }
 

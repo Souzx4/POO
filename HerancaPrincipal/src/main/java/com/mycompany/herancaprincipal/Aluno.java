@@ -12,11 +12,6 @@ public class Aluno extends Pessoa {
     private String matr;
     private String curso;
     
-
-    public Aluno(String nome, int idade, String sexo) {
-        super(nome, idade, sexo);
-    }
-    
     public void cancelarMatr(String Pessoa){
         if (this.matr.equals("Ativa")){
             this.matr = ("Cancelar");
@@ -24,13 +19,6 @@ public class Aluno extends Pessoa {
         } else {
             System.out.println("A matricula está ativa");
         }
-    }
-
-    public Aluno(String matr, String curso, String nome, int idade, String sexo) {
-        super(nome, idade, sexo);
-        this.matr = matr;
-        this.curso = curso;
-        
     }
 
     public String getMatr() {
