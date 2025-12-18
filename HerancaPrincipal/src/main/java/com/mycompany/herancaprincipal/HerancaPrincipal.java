@@ -30,6 +30,10 @@ public class HerancaPrincipal {
         p3.setSalario(1512f);
         p4.setSetor("Estoque");
         
+        p2.cancelarMatr();
+        p3.receberAum(200.20f);
+        p4.mudarTrabalho();
+        
         p1.setNome("Pedro");
         p2.setNome("Maria");
         p3.setNome("Claudio");
