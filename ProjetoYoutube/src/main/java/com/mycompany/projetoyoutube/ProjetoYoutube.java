@@ -14,6 +14,7 @@ public class ProjetoYoutube {
         Video v[] = new Video[2];
         v[0] = new Video("Aula 1 de POO");
         v[1] = new Video("Aula 2 de POO");
+        
         System.out.println(v[0].toString());
     }
 }
