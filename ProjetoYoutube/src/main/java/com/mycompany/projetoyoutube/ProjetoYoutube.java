@@ -15,6 +15,11 @@ public class ProjetoYoutube {
         v[0] = new Video("Aula 1 de POO");
         v[1] = new Video("Aula 2 de POO");
         
+        Gafalhoto g[] = new Gafalhoto[2];
+        g[0] = new Gafalhoto("Gilmar", 22, "M", "gil");
+        g[1] = new Gafalhoto("Gustavo", 30, "M", "juba");
+        parei no minuto 13:46
+        
         System.out.println(v[0].toString());
     }
 }
