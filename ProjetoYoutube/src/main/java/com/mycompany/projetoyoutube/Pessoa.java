@@ -15,7 +15,7 @@ public abstract class Pessoa {
     protected float experiencia;
     
     public void ganharExp(){
-        
+        this.experiencia++;
     }
 
     public Pessoa(String nome, int idade, String sexo) {
@@ -55,6 +55,11 @@ public abstract class Pessoa {
 
     public void setExperiencia(float experiencia) {
         this.experiencia = experiencia;
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" + "nome=" + nome + ", idade=" + idade + ", sexo=" + sexo + ", experiencia=" + experiencia + '}';
     }
     
     
